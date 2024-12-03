@@ -4,21 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro de Usuários</title>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-  <div class="container">
-    <h1>Cadastro de Usuários</h1>
-    
-    <form id="userForm">
-      <input type="text" id="username" placeholder="Nome do usuário" required />
-      <input type="number" id="age" placeholder="Idade do usuário" required />
-      <button type="submit">Cadastrar</button>
-    </form>
+  <form id="userForm">
+    <input type="text" id="username" placeholder="Nome do usuário" required>
+    <input type="number" id="age" placeholder="Idade do usuário" required>
+    <button type="submit">Cadastrar</button>
+  </form>
 
-    <h2>Usuários Cadastrados</h2>
-    <ul id="userList" class="user-list"></ul>
+  <div id="userList"></div>
+  <ul id="userList" class="list-group"></ul>
+  <div id="notificationBell">🔔</div>
+  <div id="notificationModal">
+    <div id="notificationModalContent">
+      <h2>Notificações</h2>
+      <div id="notificationsContainer"></div>
+      <button id="closeModalBtn">Fechar</button>
+    </div>
   </div>
 
   <script src="script.js"></script>
