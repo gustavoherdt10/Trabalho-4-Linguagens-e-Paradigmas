@@ -9,7 +9,7 @@ O Padrão Singleton garante que uma classe tenha apenas uma instância e oferece
 
 1. Como foi implementado
 A classe UserManager contém uma propriedade estática instance que armazena a única instância da classe. No construtor da classe, verificamos se essa instância já foi criada (if (UserManager.instance)). Se já existir, o UserManager simplesmente retorna essa instância. Caso contrário, ele cria uma nova instância e a armazena na propriedade instance.
-
+```JavaScript
 class UserManager {
     static instance = null;
 
@@ -30,7 +30,7 @@ class UserManager {
         return this.users;
     }
 }
-
+```
 O código cria a instância da classe UserManager com const userManager = new UserManager();. A partir deste ponto, em qualquer lugar do código, userManager sempre apontará para a mesma instância.
 
 2. Vantagem
