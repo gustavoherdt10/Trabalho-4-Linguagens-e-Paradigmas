@@ -7,3 +7,6 @@ O objeitvo deste trabalho é desenvolver dois sistemas simples aplicando padrõe
 
 # PADRÃO OBSERVER 
 
+# AUTORES
+
+O projeot foi desenvolvido pelos alunos Gustavo Herdt: @gustavoherdt10 e Gustavo Verdi: @GustavoVerdi
