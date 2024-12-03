@@ -2,8 +2,8 @@
 
 Este repositório é destinado para o desenvolvimento do 4º trabalho da matéria de Linguagens de Programas e Paradigmas.
 O objeitvo deste trabalho é desenvolver dois sistemas simples aplicando padrões de design ou Design Patterns.
-## Padrões de Projeto Implementados
-# PADRÃO SINGLETON
+# Padrões de Projeto Implementados
+## PADRÃO SINGLETON
 
 O Padrão Singleton garante que uma classe tenha apenas uma instância e oferece um ponto global de acesso a essa instância. Este padrão foi usado na classe UserManager para gerenciar o registro de usuários e garantir que apenas uma instância do gerenciador de usuários seja criada, independentemente de quantas vezes o código seja executado ou quantos formulários sejam submetidos.
 
