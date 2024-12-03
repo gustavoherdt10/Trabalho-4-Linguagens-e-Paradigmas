@@ -11,13 +11,13 @@ O Padrão Singleton garante que uma classe tenha apenas uma instância e oferece
 A classe UserManager contém uma propriedade estática instance que armazena a única instância da classe. No construtor da classe, verificamos se essa instância já foi criada (if (UserManager.instance)). Se já existir, o UserManager simplesmente retorna essa instância. Caso contrário, ele cria uma nova instância e a armazena na propriedade instance.
 
 class UserManager {
-    static instance = null; // Armazena a única instância da classe
+    static instance = null;
 
     constructor() {
         if (UserManager.instance) {
-            return UserManager.instance; // Retorna a instância existente, garantindo que há apenas uma instância
+            return UserManager.instance;
         }
-        UserManager.instance = this; // Cria a instância se não houver nenhuma
+        UserManager.instance = this;
         this.users = JSON.parse(localStorage.getItem('users')) || [];
     }
 
@@ -45,13 +45,13 @@ O Padrão Observer permite que objetos (observadores) se inscrevam para receber 
 A interface do usuário, representada pela lista de usuários (userList), é a parte que observa os dados de UserManager. Quando um novo usuário é adicionado, a lista de usuários é atualizada, refletindo imediatamente as mudanças no sistema.
 
 function renderUserList() {
-    userList.innerHTML = ''; // Limpa a lista antes de renderizar novamente
-    const users = userManager.getUsers(); // Obtém a lista de usuários do UserManager
+    userList.innerHTML = '';
+    const users = userManager.getUsers();
 
     users.forEach(user => {
         const li = document.createElement('li');
         li.textContent = `${user.username} (Idade: ${user.age}, Cadastrado em: ${user.createdAt})`;
-        userList.appendChild(li); // Adiciona o usuário à lista da interface
+        userList.appendChild(li);
     });
 }
 
