@@ -100,4 +100,4 @@ Interface Atualizada: Após cada adição de usuário, a lista de usuários é r
 
 # AUTORES
 
-O projeot foi desenvolvido pelos alunos [@GustavoVerdi](https://github.com/GustavoVerdi/) & [@gustavoherdt10](https://github.com/gustavoherdt10/)
+O projeto foi desenvolvido pelos alunos [@GustavoVerdi](https://github.com/GustavoVerdi/) & [@gustavoherdt10](https://github.com/gustavoherdt10/)
