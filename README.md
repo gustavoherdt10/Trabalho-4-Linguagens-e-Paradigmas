@@ -100,4 +100,4 @@ Interface Atualizada: Após cada adição de usuário, a lista de usuários é r
 
 # AUTORES
 
-O projeot foi desenvolvido pelos alunos Gustavo Herdt: @gustavoherdt10 e Gustavo Verdi: @GustavoVerdi
+O projeot foi desenvolvido pelos alunos @GustavoVerdi[@GustavoVerdi](https://github.com/GustavoVerdi/) & [@gustavoherdt10](https://github.com/gustavoherdt10/)
