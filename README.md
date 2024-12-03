@@ -5,8 +5,6 @@ O objeitvo deste trabalho é desenvolver dois sistemas simples aplicando padrõe
 # Padrões de Projeto Implementados
 ## PADRÃO SINGLETON
 
-Padrão Singleton:
-
 *Objetivo*: Garantir que uma classe tenha apenas uma instância e fornecer um ponto de acesso global a essa instância.
 *Implementação*: O padrão Singleton foi aplicado na classe UserManager, que gerencia a lista de usuários cadastrados. Essa classe garante que a lista de usuários seja manipulada de maneira centralizada, mantendo apenas uma instância da classe durante todo o ciclo de vida da aplicação.
 
