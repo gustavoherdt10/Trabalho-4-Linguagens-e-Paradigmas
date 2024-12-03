@@ -1,7 +1,7 @@
 # TRABALHO 04 - DESIGN PATTERNS
 
 Este repositório é destinado para o desenvolvimento do 4º trabalho da matéria de Linguagens de Programas e Paradigmas.
-O objeitvo deste trabalho é desenvolver dois sistemas simples aplicando padrões de design ou Design Patterns.
+O objeitvo deste trabalho é desenvolver um sistema simples aplicando padrões de design ou Design Patterns.
 # Padrões de Projeto Implementados
 ## PADRÃO SINGLETON
 
