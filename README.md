@@ -44,6 +44,7 @@ O Padrão Observer permite que objetos (observadores) se inscrevam para receber 
 1. Como foi implementado
 A interface do usuário, representada pela lista de usuários (userList), é a parte que observa os dados de UserManager. Quando um novo usuário é adicionado, a lista de usuários é atualizada, refletindo imediatamente as mudanças no sistema.
 
+```JavaScript
 function renderUserList() {
     userList.innerHTML = '';
     const users = userManager.getUsers();
@@ -54,6 +55,7 @@ function renderUserList() {
         userList.appendChild(li);
     });
 }
+```
 
 A classe UserManager é o "sujeito" que mantém a lista de usuários e gerencia os dados. Ela notifica os "observadores" (a UI) sempre que há uma mudança na lista de usuários, como quando um novo usuário é adicionado. Toda vez que o método addUser é chamado, o estado da lista de usuários é alterado. Para garantir que a UI refleta essa mudança, a função renderUserList é chamada, o que faz com que a lista de usuários seja atualizada na página.
 
