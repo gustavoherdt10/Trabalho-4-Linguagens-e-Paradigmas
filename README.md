@@ -5,37 +5,45 @@ O objeitvo deste trabalho é desenvolver dois sistemas simples aplicando padrõe
 # Padrões de Projeto Implementados
 ## PADRÃO SINGLETON
 
-O Padrão Singleton garante que uma classe tenha apenas uma instância e oferece um ponto global de acesso a essa instância. Este padrão foi usado na classe UserManager para gerenciar o registro de usuários e garantir que apenas uma instância do gerenciador de usuários seja criada, independentemente de quantas vezes o código seja executado ou quantos formulários sejam submetidos.
+Padrão Singleton:
+
+*Objetivo*: Garantir que uma classe tenha apenas uma instância e fornecer um ponto de acesso global a essa instância.
+*Implementação*: O padrão Singleton foi aplicado na classe UserManager, que gerencia a lista de usuários cadastrados. Essa classe garante que a lista de usuários seja manipulada de maneira centralizada, mantendo apenas uma instância da classe durante todo o ciclo de vida da aplicação.
+
+*UserManager* foi estruturada de forma que, mesmo quando se criam várias instâncias, sempre se retorna à mesma instância da classe. Isso garante consistência no gerenciamento dos dados dos usuários, evitando que diferentes partes da aplicação criem instâncias separadas e manipulem dados de forma inconsistente.
 
 1. Como foi implementado
 A classe UserManager contém uma propriedade estática instance que armazena a única instância da classe. No construtor da classe, verificamos se essa instância já foi criada (if (UserManager.instance)). Se já existir, o UserManager simplesmente retorna essa instância. Caso contrário, ele cria uma nova instância e a armazena na propriedade instance.
 ```JavaScript
 class UserManager {
-    static instance = null;
+    static instance = null; 
 
     constructor() {
         if (UserManager.instance) {
-            return UserManager.instance;
+            return UserManager.instance; 
         }
-        UserManager.instance = this;
+        UserManager.instance = this; 
         this.users = JSON.parse(localStorage.getItem('users')) || [];
     }
 
     addUser(user) {
         this.users.push(user);
-        localStorage.setItem('users', JSON.stringify(this.users));
+        localStorage.setItem('users', JSON.stringify(this.users)); // Salva os usuários no localStorage.
     }
 
     getUsers() {
-        return this.users;
+        return this.users; 
     }
 }
 ```
-O código cria a instância da classe UserManager com const userManager = new UserManager();. A partir deste ponto, em qualquer lugar do código, userManager sempre apontará para a mesma instância.
 
-2. Vantagem
-Com isso, garantimos que a aplicação utilize sempre a mesma instância do UserManager durante toda a execução do sistema, sem criar múltiplos objetos desnecessários, o que é essencial para o gerenciamento de dados de usuários de forma centralizada e consistente.
+```UserManager.instance = null;```: A variável instance é estática e é usada para armazenar a única instância da classe.
 
+```constructor()```: Se a instância já existir (ou seja, UserManager.instance não for null), o construtor simplesmente retorna essa instância. Caso contrário, ele cria a instância e a armazena na variável estática instance.
+
+```addUser(user)``` e ```getUsers()```: São métodos para adicionar usuários e obter a lista de usuários. Isso garante que todos os usuários sejam armazenados na mesma instância da classe.
+
+Benefício do Singleton: Ao usar o Singleton, garantimos que, independentemente de quantas vezes a classe UserManager seja instanciada ao longo do ciclo de vida da aplicação, sempre se utilizará a mesma instância, o que mantém a consistência dos dados dos usuários.
 
 # PADRÃO OBSERVER 
 
@@ -44,7 +52,6 @@ O Padrão Observer permite que objetos (observadores) se inscrevam para receber 
 1. Como foi implementado
 A interface do usuário, representada pela lista de usuários (userList), é a parte que observa os dados de UserManager. Quando um novo usuário é adicionado, a lista de usuários é atualizada, refletindo imediatamente as mudanças no sistema.
 
-```JavaScript
 function renderUserList() {
     userList.innerHTML = '';
     const users = userManager.getUsers();
@@ -55,7 +62,6 @@ function renderUserList() {
         userList.appendChild(li);
     });
 }
-```
 
 A classe UserManager é o "sujeito" que mantém a lista de usuários e gerencia os dados. Ela notifica os "observadores" (a UI) sempre que há uma mudança na lista de usuários, como quando um novo usuário é adicionado. Toda vez que o método addUser é chamado, o estado da lista de usuários é alterado. Para garantir que a UI refleta essa mudança, a função renderUserList é chamada, o que faz com que a lista de usuários seja atualizada na página.
 
