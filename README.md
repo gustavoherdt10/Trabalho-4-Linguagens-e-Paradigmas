@@ -65,6 +65,13 @@ Sempre que um usuário é adicionado via o formulário de cadastro, a função r
 2. Vantagem
 O padrão Observer facilita a manutenção da UI sincronizada com os dados do sistema. Qualquer alteração na lista de usuários (como a adição de um novo usuário) é automaticamente refletida na interface, sem a necessidade de recarregar a página ou manualmente modificar a DOM após cada alteração. Isso torna o sistema mais dinâmico e reativo.
 
+# COMO EXECUTAR O PROGRAMA
+
+- O programa é executado em um navegador web e não requer instalação de software adicional.
+- Abra o arquivo index.html em um navegador.
+- No campo “Nome do usuário”, insira um nome para cadastrar e no campo "Idades do usuário" a idade que será salva.
+- Clique no botão “Cadastrar” para salvar as informações e realizar o cadastro.
+
 # AUTORES
 
 O projeot foi desenvolvido pelos alunos Gustavo Herdt: @gustavoherdt10 e Gustavo Verdi: @GustavoVerdi
