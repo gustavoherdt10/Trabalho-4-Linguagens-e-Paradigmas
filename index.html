@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Usuários</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Cadastro de Usuários</h1>
+    
+    <form id="userForm">
+      <input type="text" id="username" placeholder="Nome do usuário" required />
+      <input type="number" id="age" placeholder="Idade do usuário" required />
+      <button type="submit">Cadastrar</button>
+    </form>
+
+    <h2>Usuários Cadastrados</h2>
+    <ul id="userList" class="user-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
